@@ -13,9 +13,12 @@
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
+        /* ✅ ИСПРАВЛЕНИЕ ДЛЯ ANDROID: ЗАПРЕТ ТЁМНОЙ ТЕМЫ */
+        :root { color-scheme: light; }
+        
         body {
             font-family: 'Cormorant Garamond', serif;
-            background-color: #ffffff; 
+            background-color: #ffffff !important; /* Принудительно белый */
             color: #4a3f35;
             line-height: 1.6;
             padding: 30px 15px;
@@ -29,12 +32,13 @@
             width: 100%;
             max-width: 600px;
             margin: 0 auto;
-            background-color: #F5EFE9;
+            background-color: #F5EFE9 !important; /* Принудительно бежевый */
             border: 1px solid #d8cfc4;
             border-radius: 18px;
             box-shadow: 0 8px 30px rgba(0,0,0,0.06);
             overflow: hidden;
             position: relative;
+            color-scheme: light; /* Запрет инверсии цветов */
         }
 
         .section-divider {
@@ -179,8 +183,7 @@
         .dress-code-text { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; color: #5a4a42; font-style: italic; }
         .dress-code-palette { display: flex; justify-content: center; gap: 10px; margin: 12px 0; flex-wrap: wrap; }
         .dress-circle { width: 36px; height: 36px; border-radius: 50%; box-shadow: 0 1px 4px rgba(0,0,0,0.08); border: 1px solid rgba(255,255,255,0.7); }
-        .c-brown { background-color: #8A7463; }
-
+        
         .schedule-list { list-style: none; text-align: left; margin: 0 auto; max-width: 440px; }
         .schedule-item { display: flex; align-items: flex-start; gap: 14px; padding: 14px 0; border-bottom: 1px solid rgba(0,0,0,0.05); }
         .schedule-time { font-family: 'Playfair Display', serif; font-size: 1.15rem; color: #2c241b; min-width: 55px; text-align: left; font-weight: 600; flex-shrink: 0; }
@@ -236,7 +239,7 @@
 <div class="container">
     <section class="hero">
         <div class="hero-wrapper">
-            <img src="IMG_8621.JPG" alt="Владислава и Георгий" class="hero-photo">
+            <img src="IMG_8621.jpg" alt="Владислава и Георгий" class="hero-photo">
 
             <div class="hero-overlay">
                 <h2 class="name">Владислава</h2>
@@ -266,7 +269,7 @@
         </p>
 
         <div class="photo-with-caption">
-            <img src="IMG_8622.JPG" alt="Наше фото" class="photo-secondary">
+            <img src="IMG_8622.jpg" alt="Наше фото" class="photo-secondary">
             <div class="photo-caption">"Там, где посеяна любовь, растёт радость"</div>
         </div>
     </section>
@@ -313,17 +316,6 @@
 
     <div class="section-divider"></div>
 
-    <section>
-        <h2 class="section-title">Маленькие Гости</h2>
-        <p class="section-text">
-            Подготовьтесь к безудержному веселью на нашей свадебной вечеринке!<br>
-            Оставьте своих маленьких деток под заботливым присмотром и присоединяйтесь к нам.<br>
-            В этот неповторимый вечер взрослые создадут свои собственные волшебные моменты!
-        </p>
-    </section>
-
-    <div class="section-divider"></div>
-
     <section class="dress-code">
         <h2 class="section-title">Дресс-код</h2>
         <p class="dress-code-intro">Будем благодарны, если вы поддержите цветовую гамму праздника!</p>
@@ -336,12 +328,12 @@
         <div class="dress-code-section">
             <div class="dress-code-label">Девушки:</div>
             <div class="dress-code-palette">
-                <div class="dress-circle c-brown"></div>
-                <div class="dress-circle" style="background-color: #D6CBB8;"></div>
-                <div class="dress-circle" style="background-color: #DDD3CB;"></div>
-                <div class="dress-circle" style="background-color: #A9BCA4;"></div>
-                <div class="dress-circle" style="background-color: #E5EDF4;"></div>
-                <div class="dress-circle" style="background-color: #CBD5E6;"></div>
+                <div class="dress-circle" style="background-color: #8A7463 !important;"></div>
+                <div class="dress-circle" style="background-color: #D6CBB8 !important;"></div>
+                <div class="dress-circle" style="background-color: #DDD3CB !important;"></div>
+                <div class="dress-circle" style="background-color: #A9BCA4 !important;"></div>
+                <div class="dress-circle" style="background-color: #E5EDF4 !important;"></div>
+                <div class="dress-circle" style="background-color: #CBD5E6 !important;"></div>
             </div>
         </div>
     </section>
