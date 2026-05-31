@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <!-- ✅ ТЕГИ ДЛЯ ОТКЛЮЧЕНИЯ КЭШИРОВАНИЯ -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Владислава и Георгий — 16.08.2026</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Cormorant Garamond', serif;
+            background-color: #ffffff; 
+            color: #4a3f35;
+            line-height: 1.6;
+            padding: 30px 15px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #F5EFE9;
+            border: 1px solid #d8cfc4;
+            border-radius: 18px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.06);
+            overflow: hidden;
+            position: relative;
+        }
+
+        .section-divider {
+            width: 60px;
+            height: 1px;
+            background: #c9b896;
+            margin: 20px auto;
+            opacity: 0.6;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            font-weight: 400;
+            color: #2c241b;
+            margin-bottom: 15px;
+            letter-spacing: 3px; 
+            text-transform: uppercase;
+            text-align: center;
+        }
+
+        .section-text, .info-text {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.2rem;
+            line-height: 1.6;
+            color: #4a3f35;
+            margin-bottom: 12px;
+            font-weight: 400;
+            text-align: center;
+        }
+
+        .hero { padding: 30px 25px 20px; text-align: center; }
+        
+        .hero-wrapper { 
+            position: relative; 
+            width: 100%; 
+            height: 650px; 
+            margin-bottom: 20px; 
+        }
+        
+        .hero-photo {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+            display: block;
+        }
+
+        .hero-overlay {
+            position: absolute; 
+            top: 55%; 
+            left: 50%; 
+            transform: translate(-50%, -50%);
+            text-align: center; 
+            width: 85%; 
+            z-index: 10;
+        }
+
+        .name {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.0rem;
+            font-weight: 400;
+            color: #2c241b;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            margin: 0;
+            line-height: 0.85;
+            text-shadow: 0 2px 15px rgba(255,255,255,0.95), 0 0 25px rgba(255,255,255,0.7);
+        }
+
+        .amp {
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            font-size: 1.4rem;
+            color: #8b7355;
+            margin: -4px 0; 
+            display: block;
+            text-shadow: 0 2px 10px rgba(255,255,255,0.9);
+        }
+
+        .hero-subtitle {
+            font-family: 'Playfair Display', serif;
+            font-size: 0.75rem;
+            color: #2c241b;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            margin: 16px 0 0; 
+            font-weight: 400;
+            line-height: 1.3;
+            text-shadow: 0 2px 12px rgba(255,255,255,0.95);
+        }
+
+        .hero-date {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: #2c241b;
+            letter-spacing: 0.14em;
+            margin-top: 6px;
+            text-shadow: 0 3px 20px rgba(255,255,255,1), 0 0 30px rgba(255,255,255,0.85);
+        }
+
+        .countdown {
+            display: flex; justify-content: center; gap: 12px;
+            margin: 15px auto 25px; width: 88%; padding: 10px;
+            background: rgba(255, 255, 255, 0.6);
+            border-radius: 8px; border: 1px solid rgba(216, 207, 196, 0.5);
+        }
+        .countdown-item { text-align: center; flex: 1; }
+        .countdown-number { font-family: 'Playfair Display', serif; font-size: 1.3rem; color: #2c241b; font-weight: 700; display: block; }
+        .countdown-label { font-size: 0.65rem; color: #6b5b4f; text-transform: lowercase; margin-top: 3px; }
+
+        section { padding: 25px 20px; text-align: center; }
+        
+        .photo-with-caption { margin: 20px 0; }
+        
+        .photo-secondary {
+            width: 100%;
+            max-width: 340px;
+            height: 380px;
+            object-fit: cover;
+            margin: 0 auto 12px;
+            display: block;
+            border-radius: 6px;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+        }
+
+        .photo-caption {
+            font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; color: #5a4a42;
+            font-style: italic; margin-top: 10px; line-height: 1.4;
+        }
+
+        .info-block { padding: 15px 0; margin: 10px 0; }
+
+        .venue-info { padding: 25px 20px; text-align: center; }
+        .venue-name { font-family: 'Playfair Display', serif; font-size: 1.35rem; color: #2c241b; margin-bottom: 8px; font-weight: 600; }
+        .venue-address { font-family: 'Cormorant Garamond', serif; font-size: 1.15rem; color: #5a4a42; font-style: italic; }
+
+        .dress-code { padding: 25px 20px; text-align: center; }
+        .dress-code-intro { font-family: 'Cormorant Garamond', serif; font-size: 1.15rem; color: #4a3f35; margin-bottom: 20px; font-style: italic; }
+        .dress-code-section { margin: 18px 0; }
+        .dress-code-label { font-family: 'Playfair Display', serif; font-size: 1.15rem; color: #2c241b; margin-bottom: 10px; font-weight: 600; }
+        .dress-code-text { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; color: #5a4a42; font-style: italic; }
+        .dress-code-palette { display: flex; justify-content: center; gap: 10px; margin: 12px 0; flex-wrap: wrap; }
+        .dress-circle { width: 36px; height: 36px; border-radius: 50%; box-shadow: 0 1px 4px rgba(0,0,0,0.08); border: 1px solid rgba(255,255,255,0.7); }
+        .c-brown { background-color: #8A7463; }
+
+        .schedule-list { list-style: none; text-align: left; margin: 0 auto; max-width: 440px; }
+        .schedule-item { display: flex; align-items: flex-start; gap: 14px; padding: 14px 0; border-bottom: 1px solid rgba(0,0,0,0.05); }
+        .schedule-time { font-family: 'Playfair Display', serif; font-size: 1.15rem; color: #2c241b; min-width: 55px; text-align: left; font-weight: 600; flex-shrink: 0; }
+        .schedule-content { flex-grow: 1; }
+        .schedule-title { font-family: 'Playfair Display', serif; font-size: 1.1rem; color: #2c241b; font-weight: 600; margin-bottom: 3px; }
+        .schedule-desc { font-family: 'Cormorant Garamond', serif; font-size: 1rem; color: #6b5b4f; font-style: italic; line-height: 1.4; }
+        .schedule-quote { 
+            margin-top: 20px; 
+            font-family: 'Cormorant Garamond', serif; 
+            font-size: 0.95rem; 
+            color: #2c241b;
+            font-style: italic; 
+            text-align: center; 
+            opacity: 1;
+        }
+
+        .note { padding: 15px 0; margin: 10px 0; }
+
+        .confirm-section { padding: 25px 20px 40px; }
+        .wedding-form { display: flex; flex-direction: column; gap: 10px; max-width: 360px; margin: 12px auto; }
+        .wedding-form input, .wedding-form textarea {
+            padding: 11px; border: 1px solid #c9b896; border-radius: 6px;
+            font-family: 'Cormorant Garamond', serif; font-size: 1rem;
+            background: rgba(255,255,255,0.7); outline: none; color: #4a3f35;
+        }
+        .wedding-form input:focus, .wedding-form textarea:focus { border-color: #8A7463; background: rgba(255,255,255,0.95); }
+        .wedding-form textarea { resize: vertical; min-height: 65px; }
+        .btn-confirm {
+            background: #8A7463; color: white; padding: 11px; border-radius: 6px;
+            font-family: 'Cormorant Garamond', serif; font-size: 1.05rem; font-weight: 600;
+            letter-spacing: 1.5px; text-transform: uppercase; border: none; cursor: pointer; transition: all 0.3s ease; margin-top: 6px;
+        }
+        .btn-confirm:hover { background: #6d5a4c; }
+        .btn-confirm:disabled { background: #b8a886; cursor: not-allowed; }
+        .form-success { display: none; margin-top: 12px; padding: 10px; background: rgba(138,116,99,0.08); border-radius: 6px; color: #6d5a4c; font-style: italic; }
+        .form-error { display: none; margin-top: 12px; padding: 10px; background: rgba(200,100,100,0.1); border-radius: 6px; color: #8b4545; font-style: italic; font-size: 0.95rem; }
+
+        @media (max-width: 600px) {
+            body { padding: 0; }
+            .container { border-radius: 0; border-left: none; border-right: none; margin: 0; box-shadow: none; }
+            .hero-wrapper { height: 550px; }
+            .name { font-size: 1.7rem; letter-spacing: 0.12em; }
+            .hero-date { font-size: 1.3rem; }
+            .countdown { gap: 6px; padding: 8px; }
+            .countdown-number { font-size: 1.1rem; }
+            .photo-secondary { height: 280px; }
+            .dress-circle { width: 30px; height: 30px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <section class="hero">
+        <div class="hero-wrapper">
+            <img src="IMG_8621.JPG" alt="Владислава и Георгий" class="hero-photo">
+
+            <div class="hero-overlay">
+                <h2 class="name">Владислава</h2>
+                <span class="amp">&</span>
+                <h2 class="name">Георгий</h2>
+                <p class="hero-subtitle">Будем счастливы разделить<br>этот день вместе с вами</p>
+                <div class="hero-date">16.08.2026</div>
+            </div>
+        </div>
+
+        <div class="countdown" id="countdown">
+            <div class="countdown-item"><span class="countdown-number" id="weeks">0</span><span class="countdown-label">недель</span></div>
+            <div class="countdown-item"><span class="countdown-number" id="days">0</span><span class="countdown-label">дней</span></div>
+            <div class="countdown-item"><span class="countdown-number" id="hours">0</span><span class="countdown-label">часов</span></div>
+            <div class="countdown-item"><span class="countdown-number" id="minutes">0</span><span class="countdown-label">минут</span></div>
+            <div class="countdown-item"><span class="countdown-number" id="seconds">0</span><span class="countdown-label">секунд</span></div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <section>
+        <h2 class="section-title">Дорогой Гость!</h2>
+        <p class="section-text">
+            Мы рады сообщить Вам, что состоится самое главное торжество в нашей жизни — день нашей свадьбы!<br><br>
+            Приглашаем Вас разделить с нами радость этого незабываемого дня.
+        </p>
+
+        <div class="photo-with-caption">
+            <img src="IMG_8622.JPG" alt="Наше фото" class="photo-secondary">
+            <div class="photo-caption">"Там, где посеяна любовь, растёт радость"</div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <section class="venue-info">
+        <h2 class="section-title">Место проведения</h2>
+        <div class="venue-name">Банкетный холл «Золотой клевер»</div>
+        <div class="venue-address">ул. Краснозатонская, 63</div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <section>
+        <div class="info-block">
+            <h2 class="section-title">Меню</h2>
+            <p class="info-text">Меню разнообразно, поэтому сообщите нам заранее, если у вас есть какие-либо диетические ограничения.</p>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <section>
+        <div class="info-block">
+            <h2 class="section-title">Пожелания по подаркам</h2>
+            <p class="info-text">
+                Ваше присутствие в день нашей свадьбы — самый значимый подарок для нас!<br><br>
+                Но мы будем очень рады вкладу в бюджет нашей семьи. Он точно поможет воплотить нашу мечту в реальность!<br><br>
+                Также мы понимаем, что дарить цветы на свадьбу — это традиция, но мы не сможем насладиться их красотой в полной мере...<br><br>
+                Приятным комплиментом для нас вместо букетов будут лотерейные билеты (при приобретении нужно будет указать наш номер телефона)
+            </p>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <section>
+        <div class="note">
+            <h2 class="section-title">Примечание</h2>
+            <p class="info-text">Будем благодарны, если вы воздержитесь от криков "Горько" на празднике, ведь поцелуй — это знак выражения чувств, он не может быть по заказу.</p>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <section>
+        <h2 class="section-title">Маленькие Гости</h2>
+        <p class="section-text">
+            Подготовьтесь к безудержному веселью на нашей свадебной вечеринке!<br>
+            Оставьте своих маленьких деток под заботливым присмотром и присоединяйтесь к нам.<br>
+            В этот неповторимый вечер взрослые создадут свои собственные волшебные моменты!
+        </p>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <section class="dress-code">
+        <h2 class="section-title">Дресс-код</h2>
+        <p class="dress-code-intro">Будем благодарны, если вы поддержите цветовую гамму праздника!</p>
+        
+        <div class="dress-code-section">
+            <div class="dress-code-label">Мужчины:</div>
+            <div class="dress-code-text">белая рубашка, темный низ, галстук/бабочка</div>
+        </div>
+
+        <div class="dress-code-section">
+            <div class="dress-code-label">Девушки:</div>
+            <div class="dress-code-palette">
+                <div class="dress-circle c-brown"></div>
+                <div class="dress-circle" style="background-color: #D6CBB8;"></div>
+                <div class="dress-circle" style="background-color: #DDD3CB;"></div>
+                <div class="dress-circle" style="background-color: #A9BCA4;"></div>
+                <div class="dress-circle" style="background-color: #E5EDF4;"></div>
+                <div class="dress-circle" style="background-color: #CBD5E6;"></div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <section>
+        <h2 class="section-title">Свадебное расписание</h2>
+        <ul class="schedule-list">
+            <li class="schedule-item">
+                <span class="schedule-time">15:30</span>
+                <div class="schedule-content">
+                    <div class="schedule-title">Начало сбора гостей</div>
+                    <div class="schedule-desc">Банкетный холл "Золотой Клевер"<br>ул. Краснозатонская, 63</div>
+                </div>
+            </li>
+            <li class="schedule-item">
+                <span class="schedule-time">16:00</span>
+                <div class="schedule-content">
+                    <div class="schedule-title">Церемония</div>
+                </div>
+            </li>
+            <li class="schedule-item">
+                <span class="schedule-time">17:00</span>
+                <div class="schedule-content">
+                    <div class="schedule-title">Праздничный банкет</div>
+                </div>
+            </li>
+            <li class="schedule-item">
+                <span class="schedule-time">22:00</span>
+                <div class="schedule-content">
+                    <div class="schedule-title">Завершение праздничной программы</div>
+                </div>
+            </li>
+            <li class="schedule-item">
+                <span class="schedule-time">00:00</span>
+                <div class="schedule-content">
+                    <div class="schedule-title">Окончание праздничного дня</div>
+                </div>
+            </li>
+        </ul>
+        <div class="schedule-quote">Даже такой день может когда-то подойти к концу</div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <section class="confirm-section">
+        <h2 class="section-title">Подтверждение</h2>
+        <p class="section-text">Пожалуйста, подтвердите свое присутствие в самое ближайшее время</p>
+        <form class="wedding-form" id="rsvpForm">
+            <input type="text" name="name" placeholder="Ваше ФИО" required>
+            <textarea name="message" placeholder="Сообщение жениху и невесте"></textarea>
+            <button type="submit" class="btn-confirm" id="submitBtn">Подтвердить</button>
+        </form>
+        <div class="form-success" id="successMessage">Спасибо! Мы с нетерпением ждём вас! </div>
+        <div class="form-error" id="errorMessage">Ошибка отправки. Попробуйте позже или напишите нам напрямую.</div>
+    </section>
+</div>
+
+<script>
+    const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbylkjipHIhFzB4oZA-XBkamjG0zXb4L0p5zIzc7AYXr8-BFxnOAmw1JuTakmugNuK2i/exec';
+
+    document.getElementById('rsvpForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const submitBtn = document.getElementById('submitBtn');
+        const successMsg = document.getElementById('successMessage');
+        const errorMsg = document.getElementById('errorMessage');
+        const formData = {
+            name: this.querySelector('[name="name"]').value,
+            message: this.querySelector('[name="message"]').value
+        };
+        submitBtn.textContent = 'Отправка...';
+        submitBtn.disabled = true;
+        errorMsg.style.display = 'none';
+
+        fetch(GOOGLE_SCRIPT_URL, {
+            method: 'POST',
+            mode: 'no-cors',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(formData)
+        })
+        .then(() => {
+            this.style.display = 'none';
+            successMsg.style.display = 'block';
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+            submitBtn.textContent = 'Подтвердить';
+            submitBtn.disabled = false;
+            errorMsg.style.display = 'block';
+        });
+    });
+
+    function updateCountdown() {
+        const weddingDate = new Date('August 16, 2026 15:00:00').getTime();
+        const now = new Date().getTime();
+        const distance = weddingDate - now;
+        document.getElementById('weeks').textContent = Math.floor(distance / (1000 * 60 * 60 * 24 * 7));
+        document.getElementById('days').textContent = Math.floor((distance % (1000 * 60 * 60 * 24 * 7)) / (1000 * 60 * 60 * 24));
+        document.getElementById('hours').textContent = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        document.getElementById('minutes').textContent = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        document.getElementById('seconds').textContent = Math.floor((distance % (1000 * 60)) / 1000);
+    }
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
+</script>
+
+</body>
+</html>
